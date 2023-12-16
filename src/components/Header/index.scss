@@ -1,0 +1,68 @@
+$comf: 'Comfortaa', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$mul: 'Mulish', sans-serif;
+$ral: 'Raleway', sans-serif;
+
+* {
+  border: px solid black;
+  text-decoration: none;
+}
+
+@keyframes smokeCloseMenu {
+  0% {display: flex; opacity: 1}
+  100% {display: none; opacity: 0}
+}
+
+.container-header {
+  max-width: 1200px;
+  background: #fff;
+  transition: 0.3s;
+  margin: 0 auto;
+  padding: 10px;
+  .isOpened {
+    max-height: 600px;
+    transition: max-height 0.8s ease-out;
+  }
+  .box-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px;
+    .logo-header {
+      .logo-text {
+        font-family: $ral;
+        font-size: 22px;
+        font-weight: 500;
+        color: #000;
+        transition: 0.3s;
+      }
+    }
+    .burger-header {
+      animation: smokeCloseMenu 0.2s forwards;
+      .burger-button {
+        background: none;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        i {
+          transition: 3s ease-in-out;
+        }
+      }
+    }
+    .links-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .nav-links {
+        font-family: $mul;
+        font-size: 20px;
+        font-weight: 500;
+        color: #5e5c5c;
+        transition: 0.3s;
+      }
+    }
+  }
+}

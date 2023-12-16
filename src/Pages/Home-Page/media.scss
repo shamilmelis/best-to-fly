@@ -1,0 +1,92 @@
+@media screen and (max-width: 840px) {
+ #main {
+   .blocks-section {
+     .blocks-container {
+       .blocks-row {
+         .col-4 {
+           width: 33.333%;
+         }
+       }
+     }
+   }
+ }
+}
+
+@media screen and (max-width: 780px) {
+  #main {
+    .search-section {
+      .searcher-container {
+        .searcher-row {
+          .col-4 {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  #main {
+    .blocks-section {
+      .blocks-container {
+        .blocks-row {
+          .col-6 {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #main {
+    .search-section {
+      .searcher-container {
+        .searcher-row {
+          .col-4 {
+            width: 100%;
+          }
+        }
+      }
+      .search-box {
+        .search-inner-box {
+          .search-main-text {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .blocks-section {
+      .blocks-container {
+        .blocks-row {
+          .box {
+            .box-card-tag {
+              .card-tag {
+                font-size: 10px;
+              }
+            }
+            .card-name {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #main {
+    .blocks-section {
+      .blocks-container {
+        .blocks-row {
+          .col-12 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
