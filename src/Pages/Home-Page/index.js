@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import {useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import {Swiper, SwiperSlide} from "swiper/react";
+import {Swiper, SwiperSlide} from 'swiper/react'
 import {Navigation} from 'swiper/modules'
 import 'swiper/scss'
 import 'swiper/scss/navigation';
@@ -172,7 +172,21 @@ function HomePage() {
 
                 <section className={'blocks-section'}>
                     <div className={'blocks-container swiper'}>
-                        <Swiper modules={[Navigation]} slidesPerView={2} navigation={true} className={'blocks-row swiper-wrapper'}>
+                        <Swiper modules={[Navigation]}
+                                breakpoints={{
+                                    900: {
+                                        slidesPerView: 3,
+                                    },
+                                    600: {
+                                        slidesPerView: 2,
+                                    },
+                                    400: {
+                                        slidesPerView: 1,
+                                    },
+                                }}
+                                navigation={true}
+                                className={'blocks-row swiper-wrapper'}
+                        >
                             {
                                 searchTours.map(el => {
                                     return (
