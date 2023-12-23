@@ -13,6 +13,31 @@
 }
 
 
+@media screen and (max-width: 500px) {
+  #main {
+     .search-section {
+       .searcher-container {
+         .search-row {
+           .col-4 {
+             .box {
+               .find-button {
+                 font-family: Verdana, sans-serif;
+               }
+             }
+           }
+         }
+       }
+       .search-box {
+         .search-inner-box {
+           .search-main-text {
+             font-family: Verdana, sans-serif;
+           }
+         }
+       }
+     }
+  }
+}
+
 @media screen and (max-width: 430px) {
   #main {
     .search-section {
