@@ -1,9 +1,15 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import '../Home-Page/index.scss'
 import '../Home-Page/media.scss'
 import Header from "../../components/Header";
 import {useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Navigation} from 'swiper/modules'
+import 'swiper/scss'
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
 function HomePage() {
     const [searchTours, setSearchTours] = useState([])
@@ -158,39 +164,21 @@ function HomePage() {
                             <div className={'total-inner-box'}>
                                 <p className={'total-text'}>Найдено:</p>
                                 <span
-                                    className={'total-value'}>{getTag && getVacation === 'Все' ? searchTours.length : searchTours.filter(el => el.tag === getTag).filter(el => el.tagVacations === getVacation).length}</span>
+                                    className={'total-value'}>{searchTours.length}</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section className={'blocks-section'}>
-                    <div className={'blocks-container'}>
-                        <div className={'blocks-row'}>
-                            <div className={'loading-wrapper'}>
-                                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
-                                    <circle fill='#FF156D' stroke='#FF156D' strokeWidth='15' r='15' cx='40' cy='65'>
-                                        <animate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;'
-                                                 keySplines='.5 0 .5 1;.5 0 .5 1'
-                                                 repeatCount='indefinite' begin='-.4'></animate>
-                                    </circle>
-                                    <circle fill='#FF156D' stroke='#FF156D' strokeWidth='15' r='15' cx='100' cy='65'>
-                                        <animate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;'
-                                                 keySplines='.5 0 .5 1;.5 0 .5 1'
-                                                 repeatCount='indefinite' begin='-.2'></animate>
-                                    </circle>
-                                    <circle fill='#FF156D' stroke='#FF156D' strokeWidth='15' r='15' cx='160' cy='65'>
-                                        <animate attributeName='cy' calcMode='spline' dur='2' values='65;135;65;'
-                                                 keySplines='.5 0 .5 1;.5 0 .5 1'
-                                                 repeatCount='indefinite' begin='0'></animate>
-                                    </circle>
-                                </svg>
-                            </div>
+                    <div className={'blocks-container swiper'}>
+                        <Swiper modules={[Navigation]} slidesPerView={2} navigation={true} className={'blocks-row swiper-wrapper'}>
                             {
                                 searchTours.map(el => {
                                     return (
-                                        <div className={'col-3 col-4 col-6 col-12'}>
+                                        <SwiperSlide className={'col-6 col-12 swiper-slide'}>
                                             <div className={'box'}>
+                                                <Link to={`search/tours/${el.id} - ${el.title}`} className={'link-wrapper'}></Link>
                                                 <div className={'box-image'}
                                                      style={{
                                                          backgroundImage: `url(${el.img})`,
@@ -204,13 +192,16 @@ function HomePage() {
                                                     <span className={'card-tag'}><i className="fa-solid fa-tag"></i> {el.tagVacations}</span>
                                                 </div>
                                                 <h1 className={'card-name'}>{el.title}</h1>
-                                                <span className={'card-price'}>Стоимость: {el.price}{el.currency}</span>
+
+                                                <div className={'card-block-info'}>
+                                                    <Link to={`search/tours/${el.id} - ${el.title}`} className={'card-info-link'}>Подробнее</Link>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </SwiperSlide>
                                     )
                                 })
                             }
-                        </div>
+                        </Swiper>
                     </div>
                 </section>
             </main>

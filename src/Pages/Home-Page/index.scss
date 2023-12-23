@@ -130,18 +130,37 @@ main {
           0% {display: flex}
           100% {display: none}
         }
-        .col-3 {
-          width: 25%;
+        .col-6:hover .link-wrapper {
+          left: 0;
+          transition: 0.5s;
+        }
+        .col-6 {
+          width: 50%;
           padding: 10px;
           .box {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
             height: 100%;
+            transition: 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0.5px solid gainsboro;
+            .link-wrapper {
+              position: absolute;
+              display: block;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+            }
             .box-image {
               width: 100%;
-              height: 150px;
+              height: 200px;
               overflow: hidden;
               border-radius: 10px;
             }
@@ -151,8 +170,9 @@ main {
               gap: 5px;
               .card-tag {
                 padding: 3px 5px;
-                background: gainsboro;
-                border-radius: 3px;
+                color: #000;
+                background: #e0e0e0;
+                border-radius: 5px;
                 font-family: $mul;
                 font-weight: 600;
                 font-size: 12px;
@@ -163,11 +183,51 @@ main {
               font-family: $ral;
               font-weight: 700;
             }
-            .card-price {
-              font-size: 16px;
-              font-family: $comf;
-              font-weight: 700;
-              color: blue;
+            .card-reviews-block {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 8px;
+              .card-reviews-stars {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 8px;
+                span {
+                  display: flex;
+                  gap: 1px;
+                  i {
+                    font-size: 12px;
+                    color: gold;
+                  }
+                }
+                .card-reviews-good-count {
+                  font-family: $mul;
+                  font-size: 13px;
+                  font-weight: 600;
+                  color: #000;
+                }
+              }
+              .card-reviews-count {
+                font-family: $mul;
+                font-size: 11px;
+                font-weight: 600;
+                color: #000;
+              }
+            }
+          }
+          .card-block-info {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            .card-info-link {
+              font-size: 14px;
+              font-family: $ral;
+              padding: 5px 8px;
+              color: #fff;
+              background: orange;
+              border-radius: 8px;
             }
           }
         }

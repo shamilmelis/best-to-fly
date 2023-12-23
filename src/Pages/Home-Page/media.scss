@@ -1,36 +1,8 @@
-@media screen and (max-width: 840px) {
- #main {
-   .blocks-section {
-     .blocks-container {
-       .blocks-row {
-         .col-4 {
-           width: 33.333%;
-         }
-       }
-     }
-   }
- }
-}
-
 @media screen and (max-width: 780px) {
   #main {
     .search-section {
       .searcher-container {
         .searcher-row {
-          .col-4 {
-            width: 50%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 678px) {
-  #main {
-    .blocks-section {
-      .blocks-container {
-        .blocks-row {
           .col-6 {
             width: 50%;
           }
@@ -39,6 +11,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 430px) {
   #main {
@@ -77,7 +50,7 @@
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 450px) {
   #main {
     .blocks-section {
       .blocks-container {
