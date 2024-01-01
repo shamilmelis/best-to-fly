@@ -1,0 +1,47 @@
+@media screen and (max-width: 1130px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-2_5 {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-2_5 {
+          width: 33.333%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-2_5 {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-2_5 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

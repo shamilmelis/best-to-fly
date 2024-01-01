@@ -10,7 +10,7 @@ import {Navigation} from 'swiper/modules'
 import 'swiper/scss'
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-
+import Footer from "../../components/Footer";
 function HomePage() {
     const [searchTours, setSearchTours] = useState([])
     const [getTag, setGetTag] = useState('Все')
@@ -180,7 +180,7 @@ function HomePage() {
                                     600: {
                                         slidesPerView: 2,
                                     },
-                                    400: {
+                                    320: {
                                         slidesPerView: 1,
                                     },
                                 }}
@@ -192,7 +192,7 @@ function HomePage() {
                                     return (
                                         <SwiperSlide className={'col-6 col-12 swiper-slide'}>
                                             <div className={'box'}>
-                                                <Link to={`search/tours/${el.id} - ${el.title}`} className={'link-wrapper'}></Link>
+                                                <Link to={`search/${el.id}-${el.title ? el.title.replaceAll(' ', '-') : el.title}`} className={'link-wrapper'}></Link>
                                                 <div className={'box-image'}
                                                      style={{
                                                          backgroundImage: `url(${el.img})`,
@@ -219,6 +219,7 @@ function HomePage() {
                     </div>
                 </section>
             </main>
+            <Footer></Footer>
         </>
     )
 }

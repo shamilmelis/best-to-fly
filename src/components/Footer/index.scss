@@ -1,0 +1,151 @@
+$comf: 'Comfortaa', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$mul: 'Mulish', sans-serif;
+$ral: 'Raleway', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(248, 249, 250, 1);
+  padding: 80px 0 10px;
+  .container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    .row-footer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 20px;
+      .col-2_5 {
+        width: 20%;
+        padding: 10px;
+        .box {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 20px;
+          .footer_logo {
+            font-family: $mul;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgba(58, 134, 255, 1);
+          }
+          .footer_contacts_box {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+            .footer_contacts_inner {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              i {
+                min-width: 20px;
+                color: rgba(58, 134, 255, 1);
+              }
+              .footer-adress {
+                font-family: $mont;
+                font-weight: 400;
+                font-size: 14px;
+                color: #000;
+              }
+              .footer-inbox {
+                font-family: $mont;
+                font-weight: 400;
+                font-size: 14px;
+                color: #000;
+              }
+              .footer-phone {
+                font-family: $mont;
+                font-weight: 400;
+                font-size: 14px;
+                color: #000;
+              }
+            }
+          }
+        }
+        .box-routes {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 20px;
+          .routes-title {
+            font-family: $mul;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgba(58, 134, 255, 1);
+          }
+          .box-routes-links {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+            .footer-links {
+              font-family: $mont;
+              font-weight: 600;
+              font-size: 13px;
+              color: gray;
+            }
+          }
+        }
+        .box-inbox {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 20px;
+          .footer-gmail {
+            font-family: $ral;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgba(58, 134, 255, 1);
+          }
+          .footer-gmail-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 15px;
+            .gmail-title {
+              font-family: $mont;
+              font-weight: 400;
+              font-size: 14px;
+              color: #000;
+            }
+            .gmail-input {
+              width: 100%;
+              padding: 13px;
+              border: 2px solid rgba(118, 174, 255, 1);
+              font-family: $mul;
+              font-weight: 400;
+              outline: none;
+            }
+            .gmail-submit {
+              padding: 15px 40px;
+              border: none;
+              border-radius: 8px;
+              background: rgba(58, 134, 255, 1);
+              font-family: $ral;
+              color: #fff;
+              font-weight: 500;
+              font-size: 12px;
+              cursor: pointer;
+            }
+            .copyright-text {
+              font-family: $mont;
+              font-weight: 400;
+              font-size: 13px;
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
