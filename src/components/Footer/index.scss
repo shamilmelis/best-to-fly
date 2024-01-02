@@ -3,19 +3,9 @@ $mont: 'Montserrat', sans-serif;
 $mul: 'Mulish', sans-serif;
 $ral: 'Raleway', sans-serif;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
 footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background: rgba(248, 249, 250, 1);
-  padding: 80px 0 10px;
+  padding: 30px 0 10px;
   .container-footer {
     max-width: 1200px;
     margin: 0 auto;
@@ -23,9 +13,9 @@ footer {
       display: flex;
       flex-wrap: wrap;
       padding: 0 20px;
-      .col-2_5 {
-        width: 20%;
-        padding: 10px;
+      .col-3 {
+        width: 25%;
+        padding: 20px;
         .box {
           display: flex;
           flex-wrap: wrap;
@@ -71,30 +61,6 @@ footer {
             }
           }
         }
-        .box-routes {
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          gap: 20px;
-          .routes-title {
-            font-family: $mul;
-            font-weight: 600;
-            font-size: 16px;
-            color: rgba(58, 134, 255, 1);
-          }
-          .box-routes-links {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 10px;
-            .footer-links {
-              font-family: $mont;
-              font-weight: 600;
-              font-size: 13px;
-              color: gray;
-            }
-          }
-        }
         .box-inbox {
           display: flex;
           flex-wrap: wrap;
@@ -136,12 +102,66 @@ footer {
               font-weight: 500;
               font-size: 12px;
               cursor: pointer;
+              transition: 0.3s;
+            }
+            .gmail-submit:hover {
+              filter: brightness(90%);
+              transition: 0.3s;
             }
             .copyright-text {
               font-family: $mont;
               font-weight: 400;
               font-size: 13px;
               color: gray;
+            }
+            .submit_callbackOff {
+              display: none;
+            }
+            .submit_callback {
+              font-size: 13px;
+              font-family: $mont;
+              color: #00e000;
+              animation: callbackSub 1.5s forwards;
+            }
+            @keyframes callbackSub {
+              0% {display: block;}
+              100% {display: none;}
+            }
+          }
+        }
+      }
+      .col-6 {
+        width: 50%;
+        padding: 10px;
+        .box {
+          display: flex;
+          flex-wrap: wrap;
+          .col {
+            width: 33.333%;
+            padding: 10px;
+            .box-routes {
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: column;
+              gap: 20px;
+              .routes-title {
+                font-family: $mul;
+                font-weight: 600;
+                font-size: 16px;
+                color: rgba(58, 134, 255, 1);
+              }
+              .box-routes-links {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 10px;
+                .footer-links {
+                  font-family: $mont;
+                  font-weight: 600;
+                  font-size: 13px;
+                  color: gray;
+                }
+              }
             }
           }
         }

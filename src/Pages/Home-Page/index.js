@@ -114,9 +114,9 @@ function HomePage() {
     }
 
     return (
-        <>
+        <div id={'wrapper'}>
             <Header></Header>
-            <main id={'main'}>
+            <main id={'main'} className={'main'}>
                 <section className={'search-section'}>
                     <div className={'search-box'}>
                         <div className={'search-inner-box'}>
@@ -220,7 +220,7 @@ function HomePage() {
                 </section>
             </main>
             <Footer></Footer>
-        </>
+        </div>
     )
 }
 

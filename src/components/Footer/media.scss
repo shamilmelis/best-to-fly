@@ -1,45 +1,106 @@
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1040px) {
   footer {
     .container-footer {
       .row-footer {
-        .col-2_5 {
-          width: 25%;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 890px) {
-  footer {
-    .container-footer {
-      .row-footer {
-        .col-2_5 {
-          width: 33.333%;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 700px) {
-  footer {
-    .container-footer {
-      .row-footer {
-        .col-2_5 {
+        .col-3 {
           width: 50%;
         }
+        .col_contacts {
+          order: 2;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 990px) {
   footer {
     .container-footer {
       .row-footer {
-        .col-2_5 {
+        .col-6 {
+          .box {
+            .col {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-3 {
+          width: 50%;
+        }
+        .col_contacts {
+          order: 2;
+        }
+        .col_inbox {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-6 {
           width: 100%;
+          .box {
+            .col {
+              width: 33.333%;
+            }
+          }
+        }
+        .col-3 {
+          width: 100%;
+        }
+        .col_inbox {
+          order: 3;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        padding: 0 10px;
+        .col-6 {
+          padding: 0;
+          .box {
+            .col {
+              width: 50%;
+            }
+          }
+        }
+        .col-3 {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  footer {
+    .container-footer {
+      .row-footer {
+        .col-6 {
+          .box {
+            .col {
+              width: 100%;
+            }
+          }
         }
       }
     }
